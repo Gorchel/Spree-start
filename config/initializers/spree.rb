@@ -10,9 +10,32 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |config|
-  # Example:
-  # Uncomment to stop tracking inventory levels in the application
-  # config.track_inventory_levels = false
+	config.admin_interface_logo = 'logo.png'
+	config.logo = 'logo.png'
+
+	country = Spree::Country.find_by_name('Russian Federation')
+
+	Spree::Money.class_eval do
+	  def to_s
+	    @money.format.gsub(/,00/, "")
+	  end
+
+	  def to_html(options = { :html => true })
+	   to_s
+	  end
+	end
+
+  	Money::Currency.register({
+	  :priority        => 1,
+	  :iso_code        => "RUB",
+	  :iso_numeric     => country.id,
+	  :name            => "Russian Federation",
+	  :symbol          => "р.",
+	  :subunit         => "коп.",
+	  :subunit_to_unit => 1,
+	  :separator       => ".",
+	  :delimiter       => ","
+	})	
 end
 
 Spree.user_class = "Spree::LegacyUser"
