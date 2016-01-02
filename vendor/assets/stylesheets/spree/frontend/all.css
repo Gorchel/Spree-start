@@ -8,3 +8,6 @@
  *= require_self
  *= require_tree .
 */
+#nav-back-container{
+	height: 51px;
+}

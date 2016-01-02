@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+#nav-back-container{
+	height: 50px;
+}
