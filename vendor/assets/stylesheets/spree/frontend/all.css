@@ -8,6 +8,43 @@
  *= require_self
  *= require_tree .
 */
+
 #nav-back-container{
 	height: 51px;
+}
+
+nav a{
+	color: white;
+}
+
+@media (max-width: 750px){
+	#link-to-cart{
+		border-top: 1px solid #393939;
+		border-bottom: 1px solid #393939;
+	}
+}
+
+@media (min-width: 750px) and (max-width: 970px){
+	nav a{
+		font-size: 12px;
+	}
+}
+
+#header{
+	border-bottom: 2px solid grey;
+}
+
+#logo img{
+	width: 100%;
+	padding: 20px;
+}
+
+#footer{
+	border-top: 2px solid grey;
+	height: 50px;
+}
+
+.header-footer-background{
+	padding-top: 10px;
+	background: url('header-back.jpg') repeat;
 }

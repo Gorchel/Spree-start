@@ -16,10 +16,10 @@ Deface::Override.new(
 				      	<ul class="nav navbar-nav">
 					        <li><a href="/">Домой</a></li>
 					        <li><a href="#">Доставка</a></li>
-					        <li><a href="#">Обратная связь</a></li>
+					        <li><a href="#">Установка</a></li>
 					        <li><a href="#">Контакты</a></li>
 				     	</ul>
-				      	<ul class="nav navbar-nav navbar-right" data-hook>
+				      	<ul class="nav navbar-nav navbar-right" id="cart-panel" data-hook>
 					      <li id="link-to-cart" data-hook>
 					        <noscript>
 					          <%= link_to Spree.t(:cart), "/cart" %>
@@ -27,6 +27,7 @@ Deface::Override.new(
 					        &nbsp;
 					      </li>
 					      <script>Spree.fetch_cart()</script>
+							<%= render :partial => "spree/shared/login_bar" %>
 					    </ul>
 				    </div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
