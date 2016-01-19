@@ -46,6 +46,7 @@ group :development do
 end
 
 gem 'spree', branch: '3-0-stable'
+gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git'
 gem 'spree_i18n', git: 'git://github.com/spree/spree_i18n.git', branch: '3-0-stable'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
